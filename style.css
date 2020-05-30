@@ -4,14 +4,14 @@
 body {
   font-family: 'Bebas Neue', 'Raleway', basic-sans, sans-serif;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.125em;
-  line-height: 1.6;
+  font-size: 16px;
+  /* line-height: 1.6; */
   color: #e7dacc;
-  background: #ddd;
   background-size: 150%;
+  /* in case the bacground image doesnt load */
+  background-color: #a14747; 
   /* background-image: linear-gradient(45deg, #a14747, #4f3b3b); */
   /* background-image: linear-gradient(45deg, #a14747, #4f3b3b); */
   background-image: linear-gradient(45deg, #a14747, #4f3b3b);
@@ -26,11 +26,13 @@ body {
   100% {background-position: left}
 }
 
-
+.section {
+  display: block;
+  width: 100%; 
+}
 
 #home {
   height: 110vh;
-  width: 100vw;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 40% auto;
@@ -61,7 +63,9 @@ body {
   line-height: 4rem;
 }
 
-
+#about {
+  height: 100vh;
+}
 
 
 /* navbar */
@@ -72,25 +76,30 @@ body {
   display: flex;
   width: 100%;
   height: 60px;
-  /* background: rgba(0,0,0,0.7); */
+  justify-content: center;
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
-  width: 100%;
-  justify-content: center;
+  padding: 6px;
+  width: auto;
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  height: fit-content;
+
 }
 
 .navbar ul li {
-  margin: 0 1rem;
-  padding: 1rem;
+  margin: 0 2rem;
+  padding: 0;
 }
 
 .navbar ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #f4f4f4;
+  font-size: 1.1em;
 }
 
 .navbar ul li a:hover {
