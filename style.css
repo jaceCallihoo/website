@@ -82,9 +82,10 @@ body {
 .navbar ul {
   display: flex;
   list-style: none;
-  padding: 6px;
+  padding: 4px;
+  padding-top: 6px; /* centers the text better */
   width: auto;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.15);
   border-radius: 5px;
   height: fit-content;
 
