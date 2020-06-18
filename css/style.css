@@ -1,6 +1,3 @@
-
-
-
 body {
   font-family: 'Raleway', basic-sans, sans-serif;
   min-height: 100vh;
@@ -24,6 +21,11 @@ body {
   0% {background-position: left}
   50% {background-position: right}
   100% {background-position: left}
+}
+
+a {
+  text-decoration: none;
+  color: rgb(66, 46, 46);
 }
 
 .section {
@@ -70,7 +72,22 @@ body {
 #about {
   min-height: 100vh;
   background-color: #e7dacc;
+  background-image: linear-gradient(to right, #d6c6b4, #e7dacc, #d6c6b4);
   box-shadow: 0 0 10px #00000070;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  padding-top: 50px;
+}
+
+#about #intro-paragraph {
+  color: white;
+  background-color: #a5988b;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 #projects {
@@ -167,6 +184,13 @@ body {
 
 }
 
+.projects-card-links button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .projects-card-text {
   color: rgb(92, 65, 65);
   background-color: #e7dacc;
@@ -192,24 +216,167 @@ body {
   transition: 0.4s linear;
 }
 
-#contact {
-  min-height: 100vh;
-  background-color: #e7dacc;
-  box-shadow: 0 0 10px #00000070;
-}
-
 
 .projects-card-links i:hover:after{
   transform: scale(1.4);
   opacity: 0;
 } 
 
+/* modal */
+.card-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-50% - .5px)) scale(0);
+  transition: 0ms ease-in-out;
+  border-radius: 4px;
+  z-index: 10;
+  background-color: #e7dacc;
+  color: rgb(66, 46, 46);
+  width: 60vw;
+  max-width: 80%;
+}
+
+.card-modal.active {
+  transform: translateX(calc(-50% - .4px)) translateY(calc(-50% - .0px)) scale(1);
+}
+
+.card-modal-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px inset #ada59b;
+}
+
+.card-modal-header .card-modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+
+.card-modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 2;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal-bite-image {
+  width: 300px;
+  float: right;
+  margin: 10px;
+}
+
+
+/* contact */
+
+#contact {
+  min-height: 100vh;
+  background-color: #e7dacc;
+  background-image: linear-gradient(to right, #d6c6b4, #e7dacc, #d6c6b4);
+  box-shadow: 0 0 10px #00000070;
+  display: flex;
+  /* padding-top: 200px; */
+  /* color: rgb(66, 46, 46); */
+}
+
+#contact-form {
+  width: 70%;
+  padding-top: 200px;
+}
+
+#contact form {
+  max-width: 800px;
+  margin: auto;
+  /* background-color: #a14747; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#contact label {
+  display: block;
+  text-align: center;
+  margin: auto;
+  color: rgb(66, 46, 46);
+    
+}
+
+#contact input, #contact textarea {
+  display: block;
+  width: auto;
+  resize: none;
+  padding: .5rem;
+  background-color: inherit;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1e5db;
+  /* border-bottom: solid 1px rgb(66, 46, 46); */
+  outline: none;
+}
+
+#contact #form-button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom: none;
+  width:100px;
+  height: 40px;
+  background-color: #7e2b2b;
+  color: #e7dacc;
+}
+
+#form-message {
+  grid-column: 1 / 3;
+}
+
+#contact-info {
+  width:30%;
+  color: rgb(92, 65, 65);
+  padding-top: 100px;
+}
+
+#contact-info h2 {
+  font-size: 2em;
+  font-family: 'Bebas Neue';
+}
+
 /* navbar */
 .navbar {
   font-family: 'Bebas Neue';
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   width: 100%;
   height: 60px;
@@ -291,3 +458,19 @@ body {
     background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
   }
    */ 
+
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 0.75em;
+  background-color: #a14747;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
