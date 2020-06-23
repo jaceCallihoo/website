@@ -78,16 +78,26 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
   padding-top: 50px;
+  align-items: center;
+  justify-items: center;
 }
 
-#about #intro-paragraph {
+#about p {
   color: white;
   background-color: #a5988b;
+  font-size: 1.2em;
   max-width: 400px;
-  margin: auto;
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#about img {
+  width: 400px;
+  border-radius: 20px;
+  border: solid #00000050 1px;
+  padding: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 #projects {
