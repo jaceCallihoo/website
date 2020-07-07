@@ -8,7 +8,7 @@ body {
   color: #e7dacc;
   background-size: 150%;
   /* in case the bacground image doesnt load */
-  background-color: #a14747; 
+  background-color: #a14747;
   /* background-image: linear-gradient(45deg, #a14747, #4f3b3b); */
   /* background-image: linear-gradient(45deg, #a14747, #4f3b3b); */
   background-image: linear-gradient(45deg, #a14747, #4f3b3b);
@@ -101,7 +101,6 @@ a {
 }
 
 #projects {
-  padding: 50px;
   padding-top: 125px;
   padding-bottom: 125px;
   min-height: 100vh;
@@ -111,6 +110,8 @@ a {
   row-gap: 30px;
   width: fit-content;
   margin: auto;
+  align-items: center;
+  justify-items: center;
 }
 
 .projects-card {
@@ -124,9 +125,9 @@ a {
   height: 70%;
 
 }
-/* 
+/*
 .card-pic {
- 
+
   width: 230px;
   height: 170px;
   margin: auto;
@@ -148,7 +149,7 @@ a {
 .projects-card-bottom {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox='0 0 32 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0v3.994C14 7.864 10.858 11 7 11c-3.866 0-7-3.138-7-7.006V0h2v4.005C2 6.765 4.24 9 7 9c2.756 0 5-2.236 5-4.995V0h2zm0 26v-5.994C14 16.138 10.866 13 7 13c-3.858 0-7 3.137-7 7.006V26h2v-6.005C2 17.235 4.244 15 7 15c2.76 0 5 2.236 5 4.995V26h2zm2-18.994C16 3.136 19.142 0 23 0c3.866 0 7 3.138 7 7.006v9.988C30 20.864 26.858 24 23 24c-3.866 0-7-3.138-7-7.006V7.006zm2-.01C18 4.235 20.244 2 23 2c2.76 0 5 2.236 5 4.995v10.01C28 19.765 25.756 22 23 22c-2.76 0-5-2.236-5-4.995V6.995z' fill='%23e7bfae' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
   background-color: #e7dacc;
-  
+
   height: 30%;
 
   /* padding: 60px 40px; */
@@ -230,7 +231,7 @@ a {
 .projects-card-links i:hover:after{
   transform: scale(1.4);
   opacity: 0;
-} 
+}
 
 /* modal */
 .card-modal {
@@ -338,7 +339,7 @@ a {
   text-align: center;
   margin: auto;
   color: rgb(66, 46, 46);
-    
+
 }
 
 #contact input, #contact textarea {
@@ -430,7 +431,7 @@ a {
 
 
 
-/*   
+/*
 
   section {
     display: flex;
@@ -440,34 +441,34 @@ a {
     text-align: center;
     width: 100%;
     height: 100vh;
-   
+
     /* Scroll Snap */
-    /* 
+    /*
     scroll-snap-align: center;
   }
-  
+
   section h1 {
     font-size: 4rem;
   }
-  
+
   /* Section Images */
   /*
   section#home {
     background: url(photos/leaf.jpg) no-repeat center center/cover;;
   }
-  
+
   section#about {
     background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;;
   }
-  
+
   section#projects {
     background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
   }
-  
+
   section#contact {
     background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
   }
-   */ 
+   */
 
 
 
@@ -476,11 +477,11 @@ a {
   width: 0.75em;
   background-color: #a14747;
 }
- 
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
