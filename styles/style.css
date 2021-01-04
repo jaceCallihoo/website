@@ -1,0 +1,102 @@
+/* Variables */
+:root {
+	--txt-color: rgb(46, 37, 26);
+	--bg-color: rgb(226, 181, 147);
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Helvetica LT Pro";
+  src: url(../assets/fonts/HelveticaLTPro-Roman.woff2);
+}
+
+@font-face {
+	font-family: "Nanum Gothic";
+	src: url(../assets/fonts/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Darker Grotesque Light";
+	src: url(../assets/fonts/DarkerGrotesque-Light.ttf);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+	font-size: 16px;
+}
+
+/* Navigation */
+.nav-button {
+	position: fixed;
+	top: 10px;
+  	right: 10px;
+	background-color: var(--txt-color);
+	color: var(--bg-color);
+	border: none;
+	font-size: 30px;
+	line-height: 20px;
+	padding: 10px;
+}
+
+nav {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+nav > ul {
+	text-align: right;
+}
+
+.section {
+	min-height: 100vh;
+	width: 100%;
+	overflow: auto;
+}
+
+/* Landing Section */
+.landing {
+	background-color: var(--bg-color);
+	background-image: url("../assets/pictures/17.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100vh;
+	color: var(--txt-color);
+}
+
+.landing > h1 {
+	font-family: 'Helvetica LT Pro';
+	font-size: 5rem;
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+
+.landing > h2 {
+	font-family: 'Darker Grotesque Light';
+	font-size: 3rem;
+	line-height: 0;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+/* About Section */
+.about {
+
+}
+
+/* Projects Section */
+.projects {
+
+}
+
+/* Blog Section */
+.blog {
+
+}
+
+/* Contact Section */
+.contact {
+
+}
