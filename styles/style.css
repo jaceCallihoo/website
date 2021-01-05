@@ -1,8 +1,20 @@
 /* Variables */
 :root {
-	--txt-color: rgb(46, 37, 26);
-	--bg-color: rgb(226, 181, 147);
+	--c1: rgb(46, 37, 26);
+	/* --c2: rgb(226, 181, 147); */
+	--c2: rgb(220, 220, 220);
 }
+
+/* c1
+color: rgb(100, 100, 100);
+color: rgb(178, 184, 205);
+color: rgb(79, 80, 62);
+
+c2
+background-color: rgb(220, 220, 220);
+    background-color: rgb(93, 131, 167);
+	background-color: rgb(221, 132, 52);
+*/
 
 /* Fonts */
 @font-face {
@@ -32,24 +44,47 @@ body {
 	position: fixed;
 	top: 10px;
   	right: 10px;
-	background-color: var(--txt-color);
-	color: var(--bg-color);
+	background-color: var(--c1);
+	color: var(--c2);
 	border: none;
 	font-size: 30px;
 	line-height: 20px;
 	padding: 10px;
+	border: 3px solid var(--c2);
 }
 
 nav {
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	right: 0px;
+	top: 40px;
+	padding: 0 10px 0 10px;
+	height: auto;
 }
 
 nav > ul {
-	text-align: right;
+	border-right: 3px solid var(--c1);
+	border-radius: 5px;
+	padding-right: 10px;
+
 }
 
+nav > ul > li {
+	text-align: right;
+	list-style-type: none;
+	line-height: normal;
+	padding: 0;
+	margin: 15px;
+	font-family: 'Helvetica LT Pro';
+	color: var(--c1);
+	font-size: 1.5rem;
+}
+
+nav > ul > li > a {
+	color: var(--c1);
+	text-decoration: none;
+}
+
+/* Sections */
 .section {
 	min-height: 100vh;
 	width: 100%;
@@ -58,12 +93,21 @@ nav > ul {
 
 /* Landing Section */
 .landing {
-	background-color: var(--bg-color);
-	background-image: url("../assets/pictures/17.png");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: auto 100vh;
-	color: var(--txt-color);
+	background-color: var(--c2);
+	/* background-image: url("../assets/pictures/17.png"); */
+	/* background-position: center; */
+	/* background-repeat: no-repeat; */
+	/* background-size: auto 100vh; */
+	color: var(--c1);
+}
+
+.landing > img {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+	max-width: inherit;
+	/* border: solid black 1px; */
 }
 
 .landing > h1 {
@@ -71,6 +115,7 @@ nav > ul {
 	font-size: 5rem;
 	margin: 10px 0 0 10px;
 	padding: 0;
+	z-index: 999;
 }
 
 .landing > h2 {
@@ -83,6 +128,7 @@ nav > ul {
 
 /* About Section */
 .about {
+	background-color: var(--c1);
 
 }
 
