@@ -31,6 +31,12 @@ background-color: rgb(220, 220, 220);
 	font-family: "Darker Grotesque Light";
 	src: url(../assets/fonts/DarkerGrotesque-Light.ttf);
 }
+
+@font-face {
+	font-family: "Lato Thin";
+	src: url(../assets/fonts/Lato-Thin.ttf);
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -41,16 +47,18 @@ body {
 
 /* Navigation */
 .nav-button {
+	z-index: 999;
 	position: fixed;
 	top: 10px;
   	right: 10px;
 	background-color: var(--c1);
 	color: var(--c2);
 	border: none;
+	text-decoration: none;
 	font-size: 30px;
 	line-height: 20px;
 	padding: 10px;
-	border: 3px solid var(--c2);
+	/* border: 3px solid var(--c2); */
 }
 
 nav {
@@ -74,7 +82,7 @@ nav > ul > li {
 	line-height: normal;
 	padding: 0;
 	margin: 15px;
-	font-family: 'Helvetica LT Pro';
+	font-family: 'Nanum Gothic';
 	color: var(--c1);
 	font-size: 1.5rem;
 }
@@ -82,6 +90,15 @@ nav > ul > li {
 nav > ul > li > a {
 	color: var(--c1);
 	text-decoration: none;
+	/* background-color: rgba(220, 220, 220, 0.7) */
+	background-color: rgba(255, 255, 255, 0.5);
+	/* box-shadow: 5px 10px var(--c2); */
+	/* text-shadow: 0 0 2px rgb(220, 220, 220); */
+	padding: 0px 10px 0px 10px;
+	border-radius: 10px 0 0 10px;
+
+	/* filter: invert(1); */
+	mix-blend-mode: difference;
 }
 
 /* Sections */
@@ -99,14 +116,15 @@ nav > ul > li > a {
 	/* background-repeat: no-repeat; */
 	/* background-size: auto 100vh; */
 	color: var(--c1);
+	/* background-image: url("../assets/pictures/dark-denim-3.png"); */
 }
 
 .landing > img {
 	position: absolute;
-	left: 10%;
-	top: 10%;
+	right: 0;
+	top: 0;
 	z-index: 0;
-	max-width: inherit;
+	max-width: 100%;
 	/* border: solid black 1px; */
 }
 
@@ -115,21 +133,22 @@ nav > ul > li > a {
 	font-size: 5rem;
 	margin: 10px 0 0 10px;
 	padding: 0;
-	z-index: 999;
+	position: relative;
 }
 
 .landing > h2 {
-	font-family: 'Darker Grotesque Light';
-	font-size: 3rem;
+	font-family: 'Lato Thin';
+	font-size: 2.5rem;
 	line-height: 0;
 	margin: 0 0 0 10px;
 	padding: 0;
+	position: relative;
 }
 
 /* About Section */
 .about {
 	background-color: var(--c1);
-
+	background-image: url("../assets/pictures/escheresque-dark.png");
 }
 
 /* Projects Section */
