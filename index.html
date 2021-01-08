@@ -25,40 +25,7 @@
 </head>
 <body>
 
-<div id="landing" class="section landing">
-	<h1>Hi, I'm Jace</h1>
-	<h2>(One of those computer scinece students)</h2>
-</div>
-
-<div id="about" class="section about invisible">
-	<h1>A little bit about me</h1>
-	<p>
-		I'm Jace, a student at the University of Alberta studying
-		computer science.
-	 </p>
-</div>
-
-<div id="projects" class="section projects invisible">
-	<p>projects</p>
-</div>
-
-<div id="blog" class="section blog invisible">
-	<p>blog</p>
-</div>
-
-<div id="contact" class="section contact invisible">
-
-	<form id="contact-form" class="" action="index.html" method="post">
-		<input class="form-fname" type="text" placeholder="First name">
-		<input class="form-lname" type="text" placeholder="Last Name">
-		<input class="form-org" type="text" placeholder="Organization (Optional)">
-		<input class="form-email" type="text" placeholder="Email">
-		<input class="form-phone" type="tel" placeholder="Phone Number (Optional)">
-		<textarea class="form-message" placeholder="Message"></textarea>
-		<button type="submit">Submit</button>
-	</form>
-</div>
-
+<!-- Navbar -->
 <nav id="navbar">
 	<ul>
 		<li><button data-link="about" id="aboutBtn">About</button></li>
@@ -68,7 +35,80 @@
 	</ul>
 </nav>
 
+<!-- Landing -->
+<div id="landing" class="section landing">
+	<h1>Hi, I'm Jace</h1>
+	<h2>(One of those computer scinece students)</h2>
+</div>
+
+<!-- About -->
+<div id="about" class="section about invisible">
+	<h1>A little bit about me</h1>
+	<p>
+		My name's Jace, and I'm a student at the University of Alberta.
+		I'm in the 4th year of my computer science degree so you could
+		say that
+	</p>
+	<p>
+		I just recently completed my first internship with RBC this
+		fall. I
+	</p>
+	<p>
+		Besides computer stuff,
+	 </p>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section projects invisible">
+	<h1>Here's what I've been up to</h1>
+	<!-- link github -->
+	<div class="deck">
+		<!--
+			Should be 2 rows of 4 cards
+
+	 	-->
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+
+		<button class="left"></button>
+		<button class="right"></button>
+	</div>
+</div>
+
+<!-- Blog -->
+<div id="blog" class="section blog invisible">
+	<h1>Check out my articles</h1>
+	<p>blog</p>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="section contact invisible">
+	<div class="">
+		<!-- LHS Text stuff -->
+		<h1>Got any questions?</h1>
+		<p>Send me a message, I'll do my best to answer. </p>
+		<!-- Linkedin, github, email -->
+		<!-- resume -->
+	</div>
+	<form id="contact-form" class="" action="index.html" method="post">
+		<input class="fname" type="text" placeholder="First name">
+		<input class="lname" type="text" placeholder="Last Name">
+		<input class="org" type="text" placeholder="Organization (Optional)">
+		<input class="email" type="text" placeholder="Email">
+		<input class="phone" type="tel" placeholder="Phone Number (Optional)">
+		<textarea class="message" placeholder="Message"></textarea>
+		<button type="submit">Submit</button>
+	</form>
+</div>
+
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/swiped-events.js"></script>
 </body>
-	<script type="text/javascript" src="scripts/script.js"></script>
-	<script type="text/javascript" src="scripts/swiped-events.js"></script>
 </html>

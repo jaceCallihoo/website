@@ -14,18 +14,23 @@ document.getElementById('navbar')
 });
 
 // Set event listeners for scroll wheel
-document.addEventListener('wheel', (e) => {
+document.addEventListener('wheel', wheel);
+
+function wheel(e) {
 	let pageIndex = stateList.indexOf(state);
-	if (e.deltaY < 0) {
-		if (pageIndex > 0) {
+	if (e.deltaY < 0) {							// on scroll down
+		if (pageIndex > 0) { 					// if target is in bounds
 			setPage(stateList[pageIndex - 1]);
 		}
-	} else if (e.deltaY > 0) {
-		if (pageIndex < stateList.length - 1) {
+	} else if (e.deltaY > 0) {					// on scroll down
+		if (pageIndex < stateList.length - 1) {	// if target is in bounds
 			setPage(stateList[pageIndex + 1]);
 		}
 	}
-});
+
+	document.removeEventListener('wheel', wheel);	// timeout
+	setTimeout(() => document.addEventListener('wheel', wheel), 150);
+}
 
 // Set event listeners for touch
 document.addEventListener('swiped-left', (e) => {
@@ -46,8 +51,15 @@ document.addEventListener('swiped-right', (e) => {
 
 // Function to set page to a given target
 function setPage(target) {
+
+	// Swap visibility from current to target
 	document.getElementById(state).classList.add('invisible');
 	document.getElementById(target).classList.remove('invisible');
+
+	// Swap highlighted nav button
+	// TODO
+
+	// Change state
 	state = target;
 }
 
