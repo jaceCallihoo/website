@@ -56,13 +56,14 @@
 	<p>
 		Besides computer stuff,
 	 </p>
+	 <img src="assets/pictures/me.png" alt="">
 </div>
 
 <!-- Projects -->
 <div id="projects" class="section projects invisible">
-	<h1>Here's what I've been up to</h1>
 	<!-- link github -->
 	<div class="deck">
+		<h1>Here's what I've been up to</h1>
 		<!--
 			Should be 2 rows of 4 cards
 
@@ -96,25 +97,27 @@
 
 <!-- Contact -->
 <div id="contact" class="section contact invisible">
-	<div class="info">
-		<!-- LHS Text stuff -->
-		<h1>Got any questions?</h1>
-		<p>Send me a message, I'll do my best to answer. </p>
-		<a href="https://www.linkedin.com/in/jacecallihoo/" target="_blank">LinkedIn</a>
-		<a href="https://github.com/jaceCallihoo" target="_blank">GitHub</a>
-		<a href="mailto:jacecallihoo@gmail.com" target="_blank">eMail</a>
-		<!-- resume -->
-		<img src="" alt="">
+	<div class="container">
+		<div class="info">
+			<!-- LHS Text stuff -->
+			<h1>Got any questions?</h1>
+			<p>Send me a message, I'll do my best to answer. </p>
+			<a href="https://www.linkedin.com/in/jacecallihoo/" target="_blank">LinkedIn</a>
+			<a href="https://github.com/jaceCallihoo" target="_blank">GitHub</a>
+			<a href="mailto:jacecallihoo@gmail.com" target="_blank">eMail</a>
+			<!-- resume -->
+			<img src="" alt="">
+		</div>
+		<form id="contact-form" class="" action="index.html" method="post">
+			<input class="fname" type="text" placeholder="First name">
+			<input class="lname" type="text" placeholder="Last Name">
+			<input class="org" type="text" placeholder="Organization (Optional)">
+			<input class="email" type="text" placeholder="Email">
+			<input class="phone" type="tel" placeholder="Phone Number (Optional)">
+			<textarea class="message" placeholder="Message"></textarea>
+			<button type="submit">Submit</button>
+		</form>
 	</div>
-	<form id="contact-form" class="" action="index.html" method="post">
-		<input class="fname" type="text" placeholder="First name">
-		<input class="lname" type="text" placeholder="Last Name">
-		<input class="org" type="text" placeholder="Organization (Optional)">
-		<input class="email" type="text" placeholder="Email">
-		<input class="phone" type="tel" placeholder="Phone Number (Optional)">
-		<textarea class="message" placeholder="Message"></textarea>
-		<button type="submit">Submit</button>
-	</form>
 </div>
 
 <script type="text/javascript" src="scripts/script.js"></script>

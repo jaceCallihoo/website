@@ -57,7 +57,20 @@ function setPage(target) {
 	document.getElementById(target).classList.remove('invisible');
 
 	// Swap highlighted nav button
-	// TODO
+	console.log(state + 'Btn')
+	// document.getElementById(state + 'Btn').classList.remove('active');
+	// document.getElementById(target + 'Btn').classList.add('active');
+	let navState = document.getElementById(state + 'Btn');
+	if (navState) {
+		navState.classList.remove('active')
+		// navState.classList.add('inactive')
+	}
+
+	let navTarget = document.getElementById(target + 'Btn');
+	if (navTarget) {
+		navTarget.classList.add('active')
+		// navTarget.classList.remove('inactive')
+	}
 
 	// Change state
 	state = target;
