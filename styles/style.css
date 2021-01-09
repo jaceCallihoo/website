@@ -79,7 +79,7 @@ body {
 	background-image: url("../assets/pictures/maze-black.png");
 	background-color: black;
 	height: 100vh;
-	overflow: auto;
+	overflow: hidden;
 }
 
 /* Navbar --------------------------------------------------------> */
@@ -89,7 +89,7 @@ nav {
 	background-color: rgba(0, 0, 0, 0.5);
 	height: 50px;
 	width: 100%;
-	overflow: auto;
+	overflow: hidden;
 
 }
 
@@ -112,7 +112,6 @@ nav > ul > li > button {
 	background-color: Transparent;
     border: none;
     cursor: pointer;
-    overflow: hidden;
     outline: none;
 	font-size: 1.5rem;
 	padding: 20px;
@@ -129,7 +128,6 @@ nav > ul > li > button {
 }
 
 .section {
-	overflow: auto;
 	color: var(--white);
 	-webkit-animation: fadein 0.25s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0.25s; /* Firefox < 16 */
@@ -174,7 +172,6 @@ nav > ul > li > button {
 
 .about {
 	color: var(--white);
-	overflow: auto;
 
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
@@ -225,13 +222,24 @@ nav > ul > li > button {
 }
 
 .projects > .deck > button.left {
-	left: 0;
+	left: -10px;
 	transform: translate(-100%, 0%);
 }
 
 .projects > .deck > button.right {
-	right: 0;
+	right: -10px;
 	transform: translate(+100%, 0%);
+}
+
+/* Blog */
+.blog {
+
+}
+
+.blog > deck {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows:;
 }
 
 /* Contact */
