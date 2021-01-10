@@ -78,9 +78,17 @@ function setPage(target) {
 
 // Form stuff ------------------------------------------------------->
 let form = document.getElementById('contact-form');
+let email = document.getElementById('contact-email');
 
-console.log(form);
-
-form.addEventListener('submit',(event) => {
+form.addEventListener('submit', (e) => {
     console.log("submit");
+});
+
+// expand on this function with a better solutino that alerts
+email.addEventListener('click', (e) => {
+	navigator.clipboard.writeText("jacecallihoo@gmail.com").then(function() {
+		alert("coppied to clipboard");
+	}, function() {
+		alert("failed to coppy to clipboard");
+	});
 });
