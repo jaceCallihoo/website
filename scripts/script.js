@@ -79,38 +79,6 @@ function setPage(target) {
 // Form stuff ------------------------------------------------------->
 // include("https://smtpjs.com/v3/smtp.js")
 
-var Email = { send: function(a)
-	{
-		return new Promise(function(n, e)
-		{
-			a.nocache = Math.floor(1e6 *Math.random() + 1), a.Action = "Send";
-			var t = JSON.stringify(a);
-			Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function(e)
-			{
-				n(e) }) })
-	}, ajaxPost: function(e, n, t)
-	{
-		var a = Email.createCORSRequest("POST", e);
-		a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function()
-		{
-			var e = a.responseText;
-			null != t && t(e)
-		}, a.send(n)
-	}, ajax: function(e, n)
-	{
-		var t = Email.createCORSRequest("GET", e);
-		t.onload = function()
-		{
-			var e = t.responseText;
-			null != n && n(e)
-		}, t.send()
-	}, createCORSRequest: function(e, n)
-	{
-		var t = new XMLHttpRequest;
-		return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
-	}
-};
-
 let form = document.getElementById('contact-form');
 let email = document.getElementById('contact-email');
 
@@ -118,17 +86,36 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
     console.log("submit");
 
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	      this.responseText = "a";
-	      document.getElementById("demo").innerHTML = this.responseText;
-	  	}
-	};
-	xhttp.open("POST", "test.txt", true);
-	xhttp.send();
+
+
+	// function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://formspree.io/f/xwkwandr");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        // success(xhr.response, xhr.responseType);
+		console.log("success");
+      } else {
+        // error(xhr.status, xhr.response, xhr.responseType);
+		console.log("error");
+      }
+    };
+    xhr.send("data");
+	  // }
+
+
+
+
+
+
+
+
+
 });
 
+// Clipboard -------------------------------------------------------->
 // expand on this function with a better solutino that alerts
 email.addEventListener('click', (e) => {
 	navigator.clipboard.writeText("jacecallihoo@gmail.com").then(function() {
