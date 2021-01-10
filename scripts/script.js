@@ -125,7 +125,7 @@ form.addEventListener('submit', (e) => {
 	      document.getElementById("demo").innerHTML = this.responseText;
 	  	}
 	};
-	xhttp.open("POST", "demo_post.asp", true);
+	xhttp.open("POST", "test.txt", true);
 	xhttp.send();
 });
 
