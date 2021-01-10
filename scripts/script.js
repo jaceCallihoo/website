@@ -90,7 +90,7 @@ form.addEventListener('submit', (e) => {
 
 	// function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://formspree.io/f/xwkwandr");
+    xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
@@ -102,7 +102,7 @@ form.addEventListener('submit', (e) => {
 		console.log("error");
       }
     };
-    xhr.send("data");
+    xhr.send(new FormData(form));
 	  // }
 
 
