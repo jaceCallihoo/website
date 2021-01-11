@@ -163,12 +163,36 @@ nav > ul > li > button.active {
 	grid-template-columns: repeat(8, 1fr);
 }
 
-.about > h1 {
-	font-family: 'Raleway Thin';
+.about > .container {
+	width: 900px;
+	height: 400px;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.about > p {
+.about > .container > h1 {
+	font-family: 'Raleway Thin';
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(0%, -200%);
+}
+
+.about > .container > p {
 	font-family: 'Titillium';
+
+	background-color: var(--black);
+	margin: 0;
 }
 
 /* Projects */
