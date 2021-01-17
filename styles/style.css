@@ -168,15 +168,22 @@ nav > ul > li > button.active {
 	height: 400px;
 
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	column-gap: 10px;
-	row-gap: 10px;
+	grid-template-columns: 3fr 1fr;
 
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.about > .container > .words {
+	display: grid;
+
+	grid-template-rows: auto;
+	column-gap: 10px;
+	row-gap: 10px;
+
+	margin-right: 10px;
 }
 
 .about > .container > h1 {
@@ -188,11 +195,18 @@ nav > ul > li > button.active {
 	transform: translate(0%, -200%);
 }
 
-.about > .container > p {
+.about > .container > .words > p {
 	font-family: 'Titillium';
 
 	background-color: var(--black);
 	margin: 0;
+	padding: 3px 15px 3px 15px;
+	line-height: 1.5rem;
+	height: auto;
+}
+
+.about > .container > img {
+	filter: grayscale(90%);
 }
 
 /* Projects */
