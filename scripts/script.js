@@ -32,6 +32,18 @@ function wheel(e) {
 	setTimeout(() => document.addEventListener('wheel', wheel), 150);
 }
 
+// Set event listeners for arrow keys
+document.addEventListener('keydown', key);
+
+function key(e) {
+  let pageIndex = stateList.indexOf(state);
+  if (e.keyCode === 39 || e.keyCode === 40) {
+    setPage(stateList[pageIndex + 1]);
+  } else {
+    setPage(stateList[pageIndex - 1]);
+  }
+}
+
 // Set event listeners for touch
 document.addEventListener('swiped-left', (e) => {
 	console.log("left");
