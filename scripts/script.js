@@ -1,7 +1,7 @@
 // Page transitions ------------------------------------------------->
 
 // State
-const stateList = ['landing', 'about', 'projects', 'blog', 'contact'];
+const stateList = ['landing', 'projects', 'contact'];
 var state = stateList[0];
 
 // Set event listeners for nav buttons
