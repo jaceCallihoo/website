@@ -39,7 +39,7 @@ function key(e) {
   let pageIndex = stateList.indexOf(state);
   if (e.keyCode === 39 || e.keyCode === 40) {
     setPage(stateList[pageIndex + 1]);
-  } else {
+  } else if (e.keyCode === 37 || e.keyCode === 38) {
     setPage(stateList[pageIndex - 1]);
   }
 }
@@ -63,6 +63,8 @@ document.addEventListener('swiped-right', (e) => {
 
 // Function to set page to a given target
 function setPage(target) {
+
+  // check for oob
   if (target === undefined) {
     return;
   }
