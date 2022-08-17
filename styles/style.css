@@ -34,11 +34,11 @@ body {
 }
 
 h1 {
-	font-family: 'Raleway Thin';
+	font-family: 'Raleway Thin', sans-serif;
 }
 
 p {
-	font-family: 'Titillium';
+	font-family: 'Titillium', sans-serif;
 }
 
 button {
