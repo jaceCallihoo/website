@@ -63,13 +63,15 @@ document.addEventListener('swiped-right', (e) => {
 
 // Function to set page to a given target
 function setPage(target) {
+  if (target === undefined) {
+    return;
+  }
 
 	// Swap visibility from current to target
 	document.getElementById(state).classList.add('invisible');
 	document.getElementById(target).classList.remove('invisible');
 
 	// Swap highlighted nav button
-	console.log(state + 'Btn')
 	// document.getElementById(state + 'Btn').classList.remove('active');
 	// document.getElementById(target + 'Btn').classList.add('active');
 	let navState = document.getElementById(state + 'Btn');
