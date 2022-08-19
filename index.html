@@ -22,13 +22,15 @@
 	<link rel="stylesheet" href="styles/style.css">
 
 	<!-- Javascript -->
+  <!-- <script type="text/javascript" src="scripts/swiped-events.js"></script> -->
+  <script type="text/javascript" src="scripts/script.js"></script>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav id="navbar">
 	<ul>
-    <li><button data-link="landing" class="active" id="landingBtn">Hi</button></li>
+    <li><button data-link="landing" id="landingBtn" class="active" >Hi</button></li>
 		<li><button data-link="projects" id="projectsBtn">Projects</button></li>
 		<li><button data-link="contact" id="contactBtn">Contact</button></li>
 	</ul>
@@ -74,7 +76,7 @@
 		</div>
 		<div class="card">
 			<div class="view">
-				<img src="https://i.ibb.co/rcgpTR9/motherboard.jpg" alt="motherboard">
+        <img src="https://i.ibb.co/72VsYVF/motherboard-min-min.jpg" alt="motherboard-min-min" border="0">
 			</div>
 			<div class="description">
 				<h2>My PC</h2>
@@ -83,7 +85,7 @@
 		</div>
 		<div class="card">
 			<div class="view">
-				<img src="https://i.ibb.co/cwLp6Hj/control-min.jpg" alt="control-min">
+        <img src="https://i.ibb.co/SvQmxcx/control-min.jpg" alt="control-min" border="0">
 			</div>
 			<div class="description">
 				<h2>Recycled Monitor</h2>
@@ -115,19 +117,16 @@
 		<form id="contact-form" action="https://formsubmit.co/98e039a1817b646da77819c26a4169c0" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none">
-			<input class="fname" type="text" placeholder="First name" name="fname" required>
-			<input class="lname" type="text" placeholder="Last Name" name="lname" required>
-			<input class="org" type="text" placeholder="Organization (Optional)" name="organization">
-			<input class="email" type="text" placeholder="Email" name="email" required>
-			<input class="phone" type="tel" placeholder="Phone Number (Optional)" name="phone">
+			<input id="fname" type="text" placeholder="First name" name="fname" required>
+			<input id="lname" type="text" placeholder="Last Name" name="lname" required>
+			<input id="org" type="text" placeholder="Organization (Optional)" name="organization">
+			<input id="email" type="text" placeholder="Email" name="email" required>
+			<input id="phone" type="tel" placeholder="Phone Number (Optional)" name="phone">
 			<textarea class="message" placeholder="Message"></textarea>
 			<button type="submit">Submit</button>
 		</form>
 	</div>
 </div>
 
-<script type="text/javascript" src="scripts/smtp.js"></script>
-<script type="text/javascript" src="scripts/swiped-events.js"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
