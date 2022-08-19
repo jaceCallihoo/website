@@ -98,39 +98,6 @@ function setPage(target) {
 let form = document.getElementById('contact-form');
 let email = document.getElementById('contact-email');
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault();
-    console.log("submit");
-
-
-
-	// function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        // success(xhr.response, xhr.responseType);
-		console.log("success");
-      } else {
-        // error(xhr.status, xhr.response, xhr.responseType);
-		console.log("error");
-      }
-    };
-    xhr.send(new FormData(form));
-	  // }
-
-
-
-
-
-
-
-
-
-});
-
 // Clipboard -------------------------------------------------------->
 // expand on this function with a better solutino that alerts
 email.addEventListener('click', (e) => {
