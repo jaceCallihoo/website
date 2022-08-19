@@ -113,11 +113,13 @@
 			<img src="" alt="">
 		</div>
 		<form id="contact-form" action="https://formsubmit.co/98e039a1817b646da77819c26a4169c0" method="POST">
-			<input class="fname" type="text" placeholder="First name">
-			<input class="lname" type="text" placeholder="Last Name">
-			<input class="org" type="text" placeholder="Organization (Optional)">
-			<input class="email" type="text" placeholder="Email">
-			<input class="phone" type="tel" placeholder="Phone Number (Optional)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+			<input class="fname" type="text" placeholder="First name" name="fname" required>
+			<input class="lname" type="text" placeholder="Last Name" name="lname" required>
+			<input class="org" type="text" placeholder="Organization (Optional)" name="organization">
+			<input class="email" type="text" placeholder="Email" name="email" required>
+			<input class="phone" type="tel" placeholder="Phone Number (Optional)" name="phone">
 			<textarea class="message" placeholder="Message"></textarea>
 			<button type="submit">Submit</button>
 		</form>
