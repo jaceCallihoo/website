@@ -209,6 +209,10 @@ nav > ul > li > button.active {
 	object-fit: contain;
 }
 
+.projects > .deck > .card > .view > #templater {
+	transform: translate(0, -75px);
+}
+
 .projects > .deck > .card > .view > .bite {
 	transform: translate(0, -25px);
 	filter: invert(0.95);
