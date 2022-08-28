@@ -138,14 +138,14 @@ nav > ul > li > button.active {
 }
 
 .landing > h1 {
-	font-family: 'Raleway Thin';
+	font-family: 'Raleway Thin', sans-serif;
 	font-size: 5rem;
 	padding: 0;
 	margin: 0;
 }
 
 .landing > h2 {
-	font-family: 'Roboto Condensed Light';
+	font-family: 'Roboto Condensed Light', sans-serif;
 	color: grey;
 	font-size: 1rem;
 	padding: 0;
@@ -160,7 +160,7 @@ nav > ul > li > button.active {
 }
 
 .projects > .deck > h1 {
-	font-family: 'Raleway Thin';
+	font-family: 'Raleway Thin', sans-serif;
 
 	position: absolute;
 	top: 0;
@@ -223,7 +223,7 @@ nav > ul > li > button.active {
 }
 
 .projects > .deck > .card > .description {
-	font-family: 'Titillium';
+	font-family: 'Titillium', sans-serif;
 	font-size: 0.8rem;
 	overflow: auto;
 	margin: 10px;
@@ -299,7 +299,7 @@ nav > ul > li > button.active {
 
 .contact > .container > form {
 	width: 400px;
-	font-family: 'Titillium';
+	font-family: 'Titillium', sans-serif;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
